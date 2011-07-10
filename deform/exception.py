@@ -35,6 +35,10 @@ class ValidationFailure(Exception):
         """
         return self.field.widget.serialize(self.field, self.cstruct)
 
+    def get_widget_resources(self):
+        return self.field.get_widget_resources()
+
+
 class TemplateError(Exception):
     pass
 
